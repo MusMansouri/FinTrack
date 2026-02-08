@@ -11,3 +11,29 @@ headers = {
 response = requests.get(url, headers=headers)
 
 print(f"Statut de la réponse : {response.status_code}")
+
+# ... (le début avec les imports et headers reste pareil)
+
+response = requests.get(url, headers=headers)
+
+if response.status_code == 200:
+    # On crée la "soupe"
+    soup = BeautifulSoup(response.content, 'html.parser')
+    
+    # Juste pour vérifier, on affiche le titre de la page
+    # On cherche la balise <span> qui a exactement cette classe
+    # (Copie-colle la classe que tu as trouvée si elle diffère légèrement)
+    prix_element = soup.find('span', class_='sc-c1554bc0-0 RbQXx base-text')
+
+    # On vérifie si on a trouvé quelque chose avant d'afficher
+    if prix_element:
+        # On nettoie le texte
+        prix_str = prix_element.text.replace('$', '').replace(',', '')
+        
+        # On convertit en nombre décimal
+        prix_nbr = float(prix_str)
+        
+        print(f"Le prix actuel est : {prix_nbr}")
+        print(f"Si j'achète 2 Bitcoins, cela me coûtera : {prix_nbr * 2}")
+    else:
+        print("Mince, le prix est introuvable avec cette classe.")
