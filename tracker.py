@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import datetime
 
 # Nouvelle cible : CoinMarketCap (Bitcoin)
 url = "https://coinmarketcap.com/currencies/bitcoin/"
@@ -11,6 +12,7 @@ headers = {
 response = requests.get(url, headers=headers)
 
 print(f"Statut de la réponse : {response.status_code}")
+print(f'{datetime.datetime.now()}')
 
 # ... (le début avec les imports et headers reste pareil)
 
@@ -37,3 +39,7 @@ if response.status_code == 200:
         print(f"Si j'achète 2 Bitcoins, cela me coûtera : {prix_nbr * 2}")
     else:
         print("Mince, le prix est introuvable avec cette classe.")
+
+with open('bitcoin_history.txt','a') as f:
+    pass 
+    f.write(f'{datetime.datetime.now()},{prix_str}\n')

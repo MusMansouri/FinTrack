@@ -16,3 +16,12 @@
   - _Astuce :_ On peut les enchaîner pour tout nettoyer d'un coup.
   - _Exemple :_ `.replace('$', '').replace(',', '')` pour enlever le symbole dollar et la virgule.
 - **`float()`** : Convertit une chaîne de caractères (ex: "96000.00") en un nombre décimal (ex: 96000.0) pour pouvoir faire des calculs mathématiques.
+## 4. Sauvegarder dans un fichier 💾
+* **`open('fichier.txt', 'mode')`** : Ouvre un fichier.
+    * Mode `'w'` (Write) : Écrase tout et recommence à zéro.
+    * Mode `'a'` (Append) : Ajoute à la suite sans effacer.
+* **Le bloc `with`** : 
+    * Structure : `with open(...) as f:`
+    * Rôle : C'est une "zone de sécurité". Le fichier reste ouvert tant qu'on est indenté (décalé) sous le `with`. Dès qu'on en sort, Python ferme et sauvegarde le fichier automatiquement.
+* **`f.write(texte)`** : Écrit du texte dans le fichier.
+    * *Attention :* Il faut ajouter `\n` à la fin de la chaîne pour passer à la ligne suivante.
