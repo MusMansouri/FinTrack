@@ -75,3 +75,35 @@ On utilise les listes `x` (dates) et `y` (prix) préparées précédemment.
 - **`plt.xlabel("Nom axe X")`** : Nomme l'axe horizontal.
 - **`plt.ylabel("Nom axe Y")`** : Nomme l'axe vertical.
 - **`plt.xticks(rotation=45)`** : Pivote les dates pour éviter qu'elles ne se chevauchent.
+
+## 7. Calculer des Statistiques 🧮
+
+Python possède des fonctions natives pour l'analyse de données simple.
+
+- **Minimum et Maximum** : `min(liste)` et `max(liste)`.
+- **Longueur (nombre d'éléments)** : `len(liste)`.
+- **Moyenne** : Il faut la calculer à la main (Somme / Total).
+
+**Exemple de code :**
+
+````python
+total = 0
+for p in prix:
+    total += p  # On additionne tous les prix
+
+moyenne = total / len(prix)
+print("Prix moyen :", moyenne)
+
+## 8. Le Style et le Design 🎨
+Pour rendre le graphique plus professionnel et lisible.
+
+* **La Grille** : `plt.grid(True)` ajoute un quadrillage en fond pour mieux lire les valeurs.
+* **Personnaliser la courbe** : On ajoute des options dans `plt.plot()`.
+    * `color='red'` : Change la couleur (anglais requis : red, blue, green, black...).
+    * `marker='o'` : Ajoute des points sur la ligne ('o' pour rond, 'x' pour croix, etc.).
+
+**Exemple complet :**
+```python
+plt.grid(True)
+plt.plot(dates, prix, color='red', marker='o')
+````
