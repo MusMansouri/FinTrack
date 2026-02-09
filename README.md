@@ -4,17 +4,18 @@ Ce projet est un script Python qui analyse l'évolution du prix du Bitcoin à pa
 
 ## 📋 Fonctionnalités
 
-* **Lecture de données** : Importation des données depuis un fichier texte brut (`bitcoin_history.txt`).
-* **Nettoyage** : Conversion des types de données pour l'analyse.
-* **Visualisation** : Création d'un graphique avec **Matplotlib** (courbe, points, grille).
-* **Statistiques** : Calcul et affichage du prix minimum, maximum et moyen dans la console.
-* **Export** : Sauvegarde automatique du graphique au format image (`.png`).
+- **Lecture de données** : Importation des données depuis un fichier texte brut (`bitcoin_history.txt`).
+- **Nettoyage** : Conversion des types de données pour l'analyse.
+- **Visualisation** : Création d'un graphique avec **Matplotlib** (courbe, points, grille).
+- **Statistiques** : Calcul et affichage du prix minimum, maximum et moyen dans la console.
+- **Export** : Sauvegarde automatique du graphique au format image (`.png`).
 
 ## 🛠️ Prérequis
 
 Pour lancer ce projet, vous avez besoin de :
-* Python 3.x installé.
-* La librairie **Matplotlib**.
+
+- Python 3.x installé.
+- La librairie **Matplotlib**.
 
 ## 🚀 Installation et Utilisation
 
@@ -32,9 +33,12 @@ Pour lancer ce projet, vous avez besoin de :
 ## 📊 Résultat
 
 Une fois le script lancé :
+
 1.  Une fenêtre s'ouvre avec la courbe d'évolution.
 2.  Les statistiques s'affichent dans le terminal.
 3.  Une image `courbe_bitcoin.png` est générée dans le dossier.
+    ![courbe generée](courbe_bitcoin.png)
 
 ---
-*Projet réalisé dans le cadre de mon apprentissage Python.*
+
+_Projet réalisé dans le cadre de mon apprentissage Python._
