@@ -41,7 +41,6 @@ while True:
         else:
             print("Mince, le prix est introuvable avec cette classe.")
 
-    with open('bitcoin_history.txt','a') as f:
-        pass 
+    with open('bitcoin_history.txt','a') as f: 
         f.write(f'{datetime.datetime.now()},{prix_str}\n')
     time.sleep(60)
