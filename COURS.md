@@ -32,3 +32,46 @@
   - **`time.sleep(60)`** : Met le programme en "pause" pendant 60 secondes.
 - **`while True:`** : Une boucle infinie. Le code à l'intérieur se répétera pour toujours.
 - **Arrêt forcé** : Pour arrêter un programme qui tourne à l'infini dans le terminal, on utilise le raccourci clavier **`Ctrl + C`**.
+
+## 6. Visualisation de Données (Data Visualization) 📊
+
+### Installation
+
+Pour tracer des graphiques, on utilise la librairie externe **Matplotlib**.
+
+- **Installation** : `py -m pip install matplotlib`
+- **Importation** : `import matplotlib.pyplot as plt`
+
+### Lecture et Nettoyage des Données 🧹
+
+Pour tracer une courbe, il faut transformer les données brutes (texte) en listes utilisables (nombres).
+
+1.  **Lire le fichier** :
+
+    ```python
+    with open('fichier.txt', 'r') as f:
+        for ligne in f:
+            # Action pour chaque ligne
+    ```
+
+    - `'r'` : Mode **Read** (lecture seule).
+    - `with ... as ...` : Assure la fermeture propre du fichier après utilisation.
+
+2.  **Découper et Convertir** :
+    - **`.split(',')`** : Coupe une chaîne de caractères à chaque virgule et crée une liste.
+    - **`float(...)`** : Convertit une chaîne de caractères (ex: "10.5") en nombre décimal. **Indispensable** pour que la courbe soit correcte (sinon "100" est classé avant "9").
+    - **`.append(...)`** : Ajoute un élément à la fin d'une liste.
+
+### Création du Graphique 📈
+
+On utilise les listes `x` (dates) et `y` (prix) préparées précédemment.
+
+- **`plt.plot(x, y)`** : Trace la courbe (prépare le dessin).
+- **`plt.show()`** : Affiche la fenêtre avec le graphique.
+
+### Personnalisation 🎨
+
+- **`plt.title("Mon Titre")`** : Ajoute un titre en haut.
+- **`plt.xlabel("Nom axe X")`** : Nomme l'axe horizontal.
+- **`plt.ylabel("Nom axe Y")`** : Nomme l'axe vertical.
+- **`plt.xticks(rotation=45)`** : Pivote les dates pour éviter qu'elles ne se chevauchent.
