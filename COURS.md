@@ -107,3 +107,25 @@ Pour rendre le graphique plus professionnel et lisible.
 plt.grid(True)
 plt.plot(dates, prix, color='red', marker='o')
 ````
+
+## 8. Data Science Pro (Pandas) 🐼
+
+Pandas remplace les listes par des tableaux intelligents (DataFrames).
+
+**Installation** : `pip install pandas`
+**Import** : `import pandas as pd`
+
+- **Lire un fichier** :
+  `df = pd.read_csv("fichier.csv")` (ou .txt)
+- **Inspecter** :
+  - `df.head()` : Voir les 5 premières lignes.
+  - `df.info()` : Voir les types de données (int, float, object).
+  - `df.describe()` : Statistiques automatiques (moyenne, min, max...).
+- **Trier** :
+  `df.sort_values(by="Prix", ascending=False)` (Du plus grand au plus petit).
+- **Filtrer** :
+  `df[df["Prix"] > 50000]` (Garder uniquement les prix > 50 000).
+- **Graphique rapide** :
+  `df.plot(x="Date", y="Prix")`
+- **Sauvegarder** :
+  `df.to_csv("resultat.csv", index=False)`
