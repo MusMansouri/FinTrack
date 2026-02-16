@@ -43,4 +43,6 @@ while True:
 
     with open('bitcoin_history.txt','a') as f: 
         f.write(f'{datetime.datetime.now()},{prix_str}\n')
+
+        
     time.sleep(60)
